@@ -16,7 +16,7 @@ source = "from-dhcp"         # 如果改为 "from-answer"，则必须取消下�
 [disk-setup]
 filesystem = "ext4"
 disk_list = ["sdb"]          # 确保目标磁盘确实是 sdb，生产环境建议用序列号
-lvm.hdsize = 256
+lvm.hdsize = 200
 lvm.swapsize = 4
 lvm.maxroot = 60             # 根分区大小 (GB)
 lvm.minfree = 10             # 建议预留一点空间用于快照或 LVM 扩展
