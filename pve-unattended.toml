@@ -4,7 +4,7 @@ country = "cn"
 fqdn = "pve.test.local"
 mailto = "root@localhost"
 timezone = "Asia/Shanghai"
-root_password = "Pve@2026!!"
+root_password = "Pve@2025!!"
 reboot_on_error = false      # 建议初次测试设为 false，方便查看报错
 
 [network]
@@ -16,8 +16,8 @@ source = "from-dhcp"         # 如果改为 "from-answer"，则必须取消下�
 [disk-setup]
 filesystem = "ext4"
 disk_list = ["sdb"]          # 确保目标磁盘确实是 sdb，生产环境建议用序列号
-lvm.hdsize = 500
-lvm.swapsize = 2
+lvm.hdsize = 256
+lvm.swapsize = 4
 lvm.maxroot = 60             # 根分区大小 (GB)
 lvm.minfree = 10             # 建议预留一点空间用于快照或 LVM 扩展
 lvm.maxvz = 0                # 设为 0 表示不创建 pve-data (适合全给 root)
